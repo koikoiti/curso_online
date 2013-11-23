@@ -9,12 +9,8 @@
 	define('DB_User' , "cursoonline");
 	define('DB_Pass' , "s1stem@");
 	
-	#Definições FPDF
-	define('DPI', 96);
-	define('MM_IN_INCH', 25.4);
-	define('A4_HEIGHT', 210);
-	define('A4_WIDTH', 297);
-	// tweak these values (in pixels)
-	define('MAX_WIDTH', 500);
-	define('MAX_HEIGHT', 500);
+	#Mensagens
+    define('MsgErro_Senha' , '<div class="bs-docs-example"><div class="alert alert-error"><button class="close" data-dismiss="alert" type="button">x</button><strong>Erro! </strong>Senha incorreta!</div></div>');
+	define('MsgErro_SenhaDiferente' , '<div class="bs-docs-example"><div class="alert alert-error"><button class="close" data-dismiss="alert" type="button">x</button><strong>Erro! </strong>Erro no Campo Senha.</div></div>');
+	define('MsgErro_Usuario' , '<div class="bs-docs-example"><div class="alert alert-error"><button class="close" data-dismiss="alert" type="button">x</button><strong>Erro! </strong>Usuário não existe.</div></div>');
 ?>

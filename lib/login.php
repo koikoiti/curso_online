@@ -5,13 +5,7 @@
 	
 	#Instancia objeto que vai tratar o banco de dados dessa pagina
 	$banco = new bancologin;
-	
-	#Trabalha com o editar cliente
-	if ($this->PaginaAux[0] == 'sair'){
-		$banco->FechaSessao();
-		$banco->RedirecionaPara('login');
-	}
-	
+    
 	#Trabalha com Post
 	if( isset($_POST["acao"]) && $_POST["acao"] != '' ){
 		$nome = strip_tags(trim(addslashes($_POST["nome"])));
@@ -26,7 +20,7 @@
 			$msg = MsgErro_Usuario;
 		}else if ($senha === $senhab){
 			$banco->AbreSessao($nome);
-			$banco->RedirecionaPara('principal');
+			$banco->RedirecionaPara('inicio');
 		}else{
 			$msg = MsgErro_Senha;
 		}

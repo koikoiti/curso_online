@@ -15,7 +15,11 @@
 		
 		#funcao imprime conteudo
 		function Imprime($Conteudo){
-            $menu = $this->CarregaHtml('menu');
+            if($this->Pagina == "login" || $this->Pagina == "inicio" || $this->VerificaSessao() == false){
+                $menu = "";
+            }else{
+                $menu = $this->CarregaHtml('menu');
+            }
 			$SaidaHtml = $this->CarregaHtml('modelo');
             $SaidaHtml = str_replace('<%MENU%>',$menu,$SaidaHtml);
 			$SaidaHtml = str_replace('<%CONTEUDO%>',$Conteudo,$SaidaHtml);
@@ -34,19 +38,46 @@
 			$SaidaHtml = str_replace('<%URLPADRAO%>',UrlPadrao,$SaidaHtml);
 			echo $SaidaHtml;
 		}
-		
-		#funcao que monta o conteudo
-		function MontaConteudo(){
-			#verifica se nao tem nada do lado da URLPADRAO
-			if(!isset($this->Pagina)){
-				return $Conteudo = $this->ChamaPhp('inicio');
-			#verifica se a pagina existe e chama ela
-			}elseif($this->BuscaPagina()){
-				return $Conteudo = $this->ChamaPhp($this->Pagina);
-			#Se nao tiver pagina chama 404
-			}else{
-				return $Conteudo = $this->CarregaHtml('404');
+        
+        #Abre Sessao
+		function AbreSessao($nome){
+			session_start('login');
+			$Sql = 'SELECT * FROM c_usuarios WHERE nome = "'.$nome.'" ';
+			$result = $this->Execute($Sql);
+			$num_rows = $this->Linha($result);
+			if($num_rows){
+				$rs = mysql_fetch_array($result , MYSQL_ASSOC);
+				$_SESSION['usuario'] = $nome;
+				$_SESSION['idsetor'] = $rs['idsetor'];
+				$_SESSION['id'] = $rs['idusuario'];
 			}
+		}
+		
+        #Verifica se esta logado
+		function VerificaSessao(){
+			if(isset($_SESSION['usuario']) ){
+				return true;
+			}else{  
+                return false;
+			}
+		}
+        
+		#funcao que monta o conteudo
+		function MontaConteudo($logado){
+            if($logado){
+    			#verifica se nao tem nada do lado da URLPADRAO
+    			if(!isset($this->Pagina)){
+    				return $Conteudo = $this->ChamaPhp('inicio');
+    			#verifica se a pagina existe e chama ela
+    			}elseif($this->BuscaPagina()){
+    				return $Conteudo = $this->ChamaPhp($this->Pagina);
+    			#Se nao tiver pagina chama 404
+    			}else{
+    				return $Conteudo = $this->CarregaHtml('404');
+    			}
+            }else{
+                return $Conteudo = $this->ChamaPhp('login');
+            }
 		} 
 		
 		#Busca a pagina e verifica se existe
