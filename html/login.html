@@ -1,12 +1,67 @@
-<div style="background-color: #ffffff">
-    <div class="login">
-        <form name="login" action="" method="POST">
-        	<label>Login</label>
-            <input type="text" class="form-control" name="login">
-            <label>Senha</label>
-            <input type="password" class="form-control" name="senha">
-            <input type ="hidden" name="acao" value="acao">
-            <button type="submit" class="btn">Entrar</button>
-         </form> 
-    </div>
-</div>
+<div style="margin-top: 40px;"><%MSG%></div>
+<table border="0" width="100%" id="content-table">
+	<tbody>
+	<tr>
+		<th rowspan="3" class="sized"><img src="<%URLPADRAO%>html/style/images/shared/side_shadowleft.jpg" width="20" height="300" alt=""></th>
+		<th class="topleft"></th>
+		<td id="tbl-border-top">&nbsp;</td>
+		<th class="topright"></th>
+		<th rowspan="3" class="sized"><img src="<%URLPADRAO%>html/style/images/shared/side_shadowright.jpg" width="20" height="300" alt=""></th>
+	</tr>
+	<tr>
+		<td id="tbl-border-left"></td>
+		<td>
+			<!--  start content-table-inner -->
+			<div id="content-table-inner">
+				<table border="0" width="100%">
+					<tbody>
+						<tr valign="middle" align="center">
+							<td>
+								<!-- start id-form -->
+								<FORM ACTION="" ENCTYPE="multipart/form-data" METHOD="POST" >
+								<table border="0" id="id-form">
+									<tbody>
+										<tr>
+											<th valign="top">Usuário:</th>
+											<td><input tabindex='1' name="nome" value=""  type="text"></td>
+											<td></td>
+										</tr>
+										<tr>
+											<th valign="top">Senha:</th>
+											<td><input tabindex='2' name="senha" value="*****" type="password" onfocus="this.value=''"></td>
+											<td></td>
+										</tr>
+										
+										<tr>
+											<th>&nbsp;</th>
+											<td valign="top">
+												<input tabindex="3" type="submit" class="btn btn-success" value="Entrar" />
+											</td>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+								<input type ="hidden" name="acao" value="acao">
+								</FORM>
+								<!-- end id-form  -->
+							</td>
+						</tr>
+						<tr>
+							<td><img src="<%URLPADRAO%>html/style/images/shared/blank.gif" width="695" height="1" alt="blank" style="height: 1px;"></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="clear"></div>
+			</div>
+			<!--  end content-table-inner  -->
+		</td>
+		<td id="tbl-border-right"></td>
+	</tr>
+	<tr>
+		<th class="sized bottomleft"></th>
+		<td id="tbl-border-bottom">&nbsp;</td>
+		<th class="sized bottomright"></th>
+	</tr>
+	</tbody>
+</table>

@@ -15,7 +15,9 @@
 		
 		#funcao imprime conteudo
 		function Imprime($Conteudo){
+            $menu = $this->CarregaHtml('menu');
 			$SaidaHtml = $this->CarregaHtml('modelo');
+            $SaidaHtml = str_replace('<%MENU%>',$menu,$SaidaHtml);
 			$SaidaHtml = str_replace('<%CONTEUDO%>',$Conteudo,$SaidaHtml);
 			$SaidaHtml = str_replace('<%URLPADRAO%>',UrlPadrao,$SaidaHtml);
 			echo $SaidaHtml;
