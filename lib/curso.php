@@ -8,6 +8,7 @@
     #Define botoes da primeira pagina
     $botaoprox = '<button class=\'btn btn-success\' onclick=\'javascript: location.href="<%URLPADRAO%>curso/curso-pt2"\'>Clique aqui para ir para a parte 2 de 5</button>';
     $botaoant =  '<button class=\'btn btn-success\' onclick=\'javascript: location.href="<%URLPADRAO%>inicio"\'>Voltar para tela inicial</button>';
+    $parte = 'Parte 1 de 5';
     $descr = '
         Gerência de Contratos<br><br>
         A gerência de contratos se inicia com as aquisições do projeto. O gerenciamento das aquisições do projeto cuida das compras e aquisições de produtos, serviços ou resultados necessários para a realização do trabalho. A organização pode ser o comprador ou fornecedor do produto, serviço ou resultado. O gerenciamento das aquisições do projeto inclui os processos de gerenciamento de contratos e de controle de mudanças necessários para administrar os contratos ou pedidos de compra. Este gerenciamento inclui, ainda, a administração de qualquer contrato emitido por uma organização externa (o comprador) que está adquirindo o projeto de uma organização executora (o fornecedor) e a administração de obrigações contratuais estabelecidas para a equipe do projeto pelo contratos. Esta área de conhecimento é composta pelos processos:<br><br>
@@ -63,6 +64,7 @@
         #Define botoes da primeira pagina
         $botaoprox = '<button class=\'btn btn-success\' onclick=\'javascript: location.href="<%URLPADRAO%>curso/curso-pt3"\'>Clique aqui para ir para a parte 3 de 5</button>';
         $botaoant =  '<button class=\'btn btn-success\' onclick=\'javascript: location.href="<%URLPADRAO%>curso"\'>Clique aqui para ir para a parte 1 de 5</button>';
+        $parte = 'Parte 2 de 5';
         $descr = '
             Solicitar Respostas de Fornecedores<br><br>
             É o processo de gerenciamento de aquisições que obtém respostas, como cotações e propostas, de possíveis fornecedores sobre como os requisitos do projeto devem ser alcançados. Os possíveis fornecedores, normalmente sem custos diretos para o projeto ou comprador, gastam a maior parte do esforço real nesse processo.<br><br>
@@ -116,6 +118,7 @@
         #Define botoes da primeira pagina
         $botaoprox = '<button class=\'btn btn-success\' onclick=\'javascript: location.href="<%URLPADRAO%>curso/curso-pt4"\'>Clique aqui para ir para a parte 4 de 5</button>';
         $botaoant =  '<button class=\'btn btn-success\' onclick=\'javascript: location.href="<%URLPADRAO%>curso/curso-pt2"\'>Clique aqui para ir para a parte 2 de 5</button>';
+        $parte = 'Parte 3 de 5';
         $descr = '
             Administração de Contratos<br><br>
             O comprador e o fornecedor administram o contrato de forma semelhante. Cada uma das partes garante que tanto ela quanto a outra parte atendem às obrigações contratuais e que seus próprios direitos legais estão protegidos. O processo de Administração de Contratos garante que o desempenho do fornecedor atende aos requisitos contratuais e que o comprador atua de acordo com os termos do contrato. Em projetos maiores com vários fornecedores de produtos, serviços e resultados, um aspecto importante da administração de contrato é o gerenciamento de interfaces entre os diversos fornecedores.<br><br>
@@ -191,6 +194,7 @@
         #Define botoes da primeira pagina
         $botaoprox = '<button class=\'btn btn-success\' onclick=\'javascript: location.href="<%URLPADRAO%>curso/curso-pt5"\'>Clique aqui para ir para a parte 5 de 5</button>';
         $botaoant =  '<button class=\'btn btn-success\' onclick=\'javascript: location.href="<%URLPADRAO%>curso/curso-pt3"\'>Clique aqui para ir para a parte 3 de 5</button>';
+        $parte = 'Parte 4 de 5';
         $descr = '
             Realizar Aquisições<br><br>
             É o processo que analisa as respostas dos fornecedores, realizando assim a seleção de um fornecedor para ser contratado.<br><br>
@@ -301,6 +305,7 @@
         #Define botoes da primeira pagina
         $botaoprox = '<button class=\'btn btn-success\' onclick=\'javascript: location.href="<%URLPADRAO%>pergunta/1"\'>Clique aqui para iniciar o teste</button>';
         $botaoant =  '<button class=\'btn btn-success\' onclick=\'javascript: location.href="<%URLPADRAO%>curso/curso-pt4"\'>Clique aqui para ir para a parte 4 de 5</button>';
+        $parte = 'Parte 5 de 5';
         $descr = '
             Calendários de recursos<br>
             A quantidade e disponibilidade de recursos contratados e as datas em que cada recurso especificado pode estar ativo e inativo são documentadas.<br><br>
@@ -436,5 +441,6 @@
     $Conteudo = str_replace('<%CURSO%>',$descr,$Conteudo);
     $Conteudo = str_replace('<%BOTAOPROX%>',$botaoprox,$Conteudo);
     $Conteudo = str_replace('<%BOTAOANT%>',$botaoant,$Conteudo);
+    $Conteudo = str_replace('<%PARTE%>',$parte,$Conteudo);
     $Conteudo = str_replace('<%URLPADRAO%>',UrlPadrao,$Conteudo);
 ?>
