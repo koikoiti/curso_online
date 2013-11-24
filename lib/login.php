@@ -6,6 +6,12 @@
 	#Instancia objeto que vai tratar o banco de dados dessa pagina
 	$banco = new bancologin;
     
+    #Trabalha com sair
+	if ($this->PaginaAux[0] == 'sair'){
+		$banco->FechaSessao();
+		$banco->RedirecionaPara('login');
+	}
+    
 	#Trabalha com Post
 	if( isset($_POST["acao"]) && $_POST["acao"] != '' ){
 		$nome = strip_tags(trim(addslashes($_POST["nome"])));

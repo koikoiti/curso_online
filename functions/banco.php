@@ -11,6 +11,12 @@
 			if (!$db_selected) {
 				$this->ChamaManutencao();
 			}
+		}
+        
+        #Fecha Sessao
+		function FechaSessao(){
+			$_SESSION = array();
+			session_destroy();
 		}	
 		
 		#funcao imprime conteudo
