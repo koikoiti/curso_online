@@ -1905,3 +1905,10 @@ a:hover.back-login	{
     font-size: 16px;
     line-height: 30px;
 }
+
+.botao-prox-curso{
+    float: right;
+}
+.botao-ant-curso{
+    float: left;
+}

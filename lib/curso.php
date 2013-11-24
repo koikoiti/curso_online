@@ -5,7 +5,9 @@
 	#Instancia o objeto
 	$banco = new bancoinicio();
     
-   $botaoprox = '<button class=\'btn btn-success\' onclick=\'javascript: location.href="<%URLPADRAO%>curso"\'>Parte aqui para ir para a parte 2 de 5</button>';
+    #Define botoes da primeira pagina
+    $botaoprox = '<button class=\'btn btn-success\' onclick=\'javascript: location.href="<%URLPADRAO%>curso/curso-pt2"\'>Clique aqui para ir para a parte 2 de 5</button>';
+    $botaoant =  '<button class=\'btn btn-success\' onclick=\'javascript: location.href="<%URLPADRAO%>inicio"\'>Voltar para tela inicial</button>';
     $descr = '
         Gerência de Contratos<br><br>
         A gerência de contratos se inicia com as aquisições do projeto. O gerenciamento das aquisições do projeto cuida das compras e aquisições de produtos, serviços ou resultados necessários para a realização do trabalho. A organização pode ser o comprador ou fornecedor do produto, serviço ou resultado. O gerenciamento das aquisições do projeto inclui os processos de gerenciamento de contratos e de controle de mudanças necessários para administrar os contratos ou pedidos de compra. Este gerenciamento inclui, ainda, a administração de qualquer contrato emitido por uma organização externa (o comprador) que está adquirindo o projeto de uma organização executora (o fornecedor) e a administração de obrigações contratuais estabelecidas para a equipe do projeto pelo contratos. Esta área de conhecimento é composta pelos processos:<br><br>
@@ -58,6 +60,9 @@
     ';
     
     if($this->PaginaAux[0] == 'curso-pt2'){
+        #Define botoes da primeira pagina
+        $botaoprox = '<button class=\'btn btn-success\' onclick=\'javascript: location.href="<%URLPADRAO%>curso/curso-pt3"\'>Clique aqui para ir para a parte 3 de 5</button>';
+        $botaoant =  '<button class=\'btn btn-success\' onclick=\'javascript: location.href="<%URLPADRAO%>curso"\'>Clique aqui para ir para a parte 1 de 5</button>';
         $descr = '
             Solicitar Respostas de Fornecedores<br><br>
             É o processo de gerenciamento de aquisições que obtém respostas, como cotações e propostas, de possíveis fornecedores sobre como os requisitos do projeto devem ser alcançados. Os possíveis fornecedores, normalmente sem custos diretos para o projeto ou comprador, gastam a maior parte do esforço real nesse processo.<br><br>
@@ -108,6 +113,9 @@
             6. Mudanças solicitadas<br>
             ';
     }elseif($this->PaginaAux[0] == 'curso-pt3'){
+        #Define botoes da primeira pagina
+        $botaoprox = '<button class=\'btn btn-success\' onclick=\'javascript: location.href="<%URLPADRAO%>curso/curso-pt4"\'>Clique aqui para ir para a parte 4 de 5</button>';
+        $botaoant =  '<button class=\'btn btn-success\' onclick=\'javascript: location.href="<%URLPADRAO%>curso/curso-pt2"\'>Clique aqui para ir para a parte 2 de 5</button>';
         $descr = '
             Administração de Contratos<br><br>
             O comprador e o fornecedor administram o contrato de forma semelhante. Cada uma das partes garante que tanto ela quanto a outra parte atendem às obrigações contratuais e que seus próprios direitos legais estão protegidos. O processo de Administração de Contratos garante que o desempenho do fornecedor atende aos requisitos contratuais e que o comprador atua de acordo com os termos do contrato. Em projetos maiores com vários fornecedores de produtos, serviços e resultados, um aspecto importante da administração de contrato é o gerenciamento de interfaces entre os diversos fornecedores.<br><br>
@@ -180,6 +188,9 @@
             Um tipo de Contrato Híbrido, contendo aspectos dos Contratos de Custos Reembolsáveis e Contratos de Preço Fixo. Os Contratos por Tempo e Material se assemelham aos acordos do tipo com Custos Reembolsáveis por serem modificáveis, já que o valor total do acordo não é definido no momento em que ele é firmado. Dessa forma, os Contratos por Tempo e Material podem ter o seu valor aumentado como se fossem acordos de Custos Reembolsáveis. Por outro lado, os acordos por Tempo e Material podem também ser semelhantes a acordos de Preço Fixo. Por exemplo, os valores unitários são preestabelecidos pelo comprador e pelo fornecedor, quando ambas as partes concordam com os valores de serviços profissionais para a categoria de "engenheiros seniores"<br><br>
          ';
     }elseif($this->PaginaAux[0] == 'curso-pt4'){
+        #Define botoes da primeira pagina
+        $botaoprox = '<button class=\'btn btn-success\' onclick=\'javascript: location.href="<%URLPADRAO%>curso/curso-pt5"\'>Clique aqui para ir para a parte 5 de 5</button>';
+        $botaoant =  '<button class=\'btn btn-success\' onclick=\'javascript: location.href="<%URLPADRAO%>curso/curso-pt3"\'>Clique aqui para ir para a parte 3 de 5</button>';
         $descr = '
             Realizar Aquisições<br><br>
             É o processo que analisa as respostas dos fornecedores, realizando assim a seleção de um fornecedor para ser contratado.<br><br>
@@ -287,6 +298,9 @@
             Local de entrega<br>
         ';
     }elseif($this->PaginaAux[0] == 'curso-pt5'){
+        #Define botoes da primeira pagina
+        $botaoprox = '<button class=\'btn btn-success\' onclick=\'javascript: location.href="<%URLPADRAO%>resposta"\'>Clique aqui para iniciar o teste</button>';
+        $botaoant =  '<button class=\'btn btn-success\' onclick=\'javascript: location.href="<%URLPADRAO%>curso/curso-pt4"\'>Clique aqui para ir para a parte 4 de 5</button>';
         $descr = '
             Calendários de recursos<br>
             A quantidade e disponibilidade de recursos contratados e as datas em que cada recurso especificado pode estar ativo e inativo são documentadas.<br><br>
@@ -421,5 +435,6 @@
 	$Conteudo = $banco->CarregaHtml('curso');
     $Conteudo = str_replace('<%CURSO%>',$descr,$Conteudo);
     $Conteudo = str_replace('<%BOTAOPROX%>',$botaoprox,$Conteudo);
+    $Conteudo = str_replace('<%BOTAOANT%>',$botaoant,$Conteudo);
     $Conteudo = str_replace('<%URLPADRAO%>',UrlPadrao,$Conteudo);
 ?>
