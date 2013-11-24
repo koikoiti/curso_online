@@ -21,7 +21,7 @@
 		
 		#funcao imprime conteudo
 		function Imprime($Conteudo){
-            if($this->Pagina == "login" || $this->Pagina == "inicio" || $this->VerificaSessao() == false){
+            if($this->Pagina == "login" || $this->VerificaSessao() == false){
                 $menu = "";
             }else{
                 $menu = $this->CarregaHtml('menu');
