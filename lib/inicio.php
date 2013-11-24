@@ -10,6 +10,10 @@
     $aux = explode(' ',$acesso);
     $data = date("d/m/Y", strtotime($aux[0]));
     $acesso = $data.' '.$aux[1];
+    
+    #Busca quantas questoes falta
+    $questoes = $banco->BuscaQuestoes($_SESSION['id']);
+    
 
 	#Imprimi valores
 	$Conteudo = $banco->CarregaHtml('inicio');
