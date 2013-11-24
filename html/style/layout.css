@@ -1896,3 +1896,8 @@ a:hover.back-login	{
 #produtosbanco ul{
 	white-space: nowrap;
 }
+
+.conteudo-curso{
+    text-align:justify;
+    font-size: 15px;
+}
