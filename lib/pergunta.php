@@ -46,6 +46,7 @@
 	$Conteudo = $banco->CarregaHtml('pergunta');
     $Conteudo = str_replace("<%PERGUNTA%>", utf8_decode($pergunta), $Conteudo);
     $Conteudo = str_replace("<%RESPOSTAS%>", utf8_decode($Respostas), $Conteudo);
+    $Conteudo = str_replace("<%NUMERO%>", $idpergunta, $Conteudo);
     $Conteudo = str_replace("<%PROXIMO%>", $proximo, $Conteudo);
     $Conteudo = str_replace("<%ANTERIOR%>", $anterior, $Conteudo);
 ?>
