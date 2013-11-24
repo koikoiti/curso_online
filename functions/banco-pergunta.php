@@ -15,7 +15,6 @@
             while($rs = mysql_fetch_array($result, MYSQL_ASSOC)){
                 $Linha = $Auxilio;
                 $Linha = str_replace("<%IDRESPOSTA%>", $rs["idresposta"], $Linha);
-                $Linha = str_replace("<%IDPERGUNTA%>", $idpergunta, $Linha);
                 $Linha = str_replace("<%RESPOSTA%>", $rs["resposta"], $Linha);
                 $Respostas .= $Linha;
             }

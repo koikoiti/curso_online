@@ -17,18 +17,20 @@
 				<!-- START CONTENT-TABLE-INNER -->
 				<div id="content-table-inner">
 					<!-- START TABLE-CONTENT -->
-			
-					<div id="table-content">
-						<h3>
-                            <%PERGUNTA%> 
-                        </h3>
-                        <hr />
-                        <div class="resposta">
-                            <form name="respostas" action="">
+                    <form method="POST" name="respostas" action="">                 
+    					<div id="table-content">
+                            <h3>
+                                <%PERGUNTA%> 
+                            </h3>
+                            <hr />
+                            <div class="resposta">
                                 <%RESPOSTAS%>
-                            </form>
-                        </div>
-					</div>
+                            </div>
+    					</div>
+                        <div style="float: right;"><%PROXIMO%></div>
+                        <div style="float: left;"><%ANTERIOR%></div>
+                        <input type="hidden" name="acao" value="acao"/>
+                    </form>
 					<!-- END TABLE-CONTENT -->
 					<div class="clear"></div>
 				<!-- END CONTENT-INNER -->

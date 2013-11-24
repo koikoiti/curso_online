@@ -14,8 +14,35 @@
     #Monta as respostas da pergunta
     $Respostas = $banco->MontaRespostas($idpergunta);
     
+    #Trabalha com POST
+    if(isset($_POST["acao"]) && $_POST["acao"] != ""){
+        if($_POST["resposta"]){
+            #User selecionou uma resposta. Fazer INSERT
+        }
+        if($_POST["proximo"]){
+            $banco->RedirecionaPara("pergunta/".($idpergunta + 1));
+        }
+        if($_POST["anterior"]){
+            $banco->RedirecionaPara("pergunta/".($idpergunta - 1));
+        }
+    }
+    
+    #Monta as paginações
+    if($idpergunta == "1"){
+        $proximo = "<input type='submit' name='proximo' value='Pr&oacute;xima' class='btn btn-primary'>";
+        $anterior = "";
+    }elseif($idpergunta == "10"){
+        $proximo = "";
+        $anterior = "<input type='submit' name='anterior' value='Anterior' class='btn btn-primary'>";
+    }else{
+        $proximo = "<input type='submit' name='proximo' value='Pr&oacute;xima' class='btn btn-primary'>";
+        $anterior = "<input type='submit' name='anterior' value='Anterior' class='btn btn-primary'>";
+    }
+    
 	#Imprimi valores
 	$Conteudo = $banco->CarregaHtml('pergunta');
     $Conteudo = str_replace("<%PERGUNTA%>", utf8_decode($pergunta), $Conteudo);
     $Conteudo = str_replace("<%RESPOSTAS%>", utf8_decode($Respostas), $Conteudo);
+    $Conteudo = str_replace("<%PROXIMO%>", $proximo, $Conteudo);
+    $Conteudo = str_replace("<%ANTERIOR%>", $anterior, $Conteudo);
 ?>
