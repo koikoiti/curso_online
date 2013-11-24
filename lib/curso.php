@@ -435,7 +435,11 @@
             Atualizações nos ativos de processos organizacionais que podem ser atualizados incluem, entre outros: Arquivo de aquisições. Um conjunto completo de documentos indexados do contrato, incluindo o contrato encerrado, é preparado para inclusão com os arquivos finais do projeto. Aceitação da entrega. O comprador, em geral por meio de administrador de aquisições autorizado, envia ao fornecedor um aviso requisitos para a aceitação formal das entregas e o modo como tratar as entregas que não estão em conformidade, normalmente são definidos no contrato. Documentação de lições aprendidas. As lições aprendidas, a experiência adquirida e as recomendações de melhoria dos processos devem ser incluídas nos arquivos do projeto para melhorar as aquisições futuras.<br><br>
             ';
     }
-
+    
+    if($this->PaginaAux[0] == 'zerar'){
+        $banco->RedirecionaPara('inicio');
+    }
+    
 	#Imprimi valores
 	$Conteudo = $banco->CarregaHtml('curso');
     $Conteudo = str_replace('<%CURSO%>',$descr,$Conteudo);

@@ -42,13 +42,17 @@
                 
                 foreach($certas as $key=>$value){    
                     if($value == true){
-                        $Resultado .= "$key - Acertou <br/>";
+                        $Resultado .= "Questão: $key - Acertou <br/>";
                         $acertos++;
                     }else{
-                        $Resultado .= "$key - Errou <br/>";
+                        $Resultado .= "Questão: $key - Errou <br/>";
                     }
                 }
-                $Resultado .= "<br/> Você obteve " . ($acertos * 10) . "% no teste!";
+                if($acertos >= 7){
+                $Resultado .= "<br/> Você obteve " . ($acertos * 10) . "% no teste!<br><br> <strong>APROVADO!</strong>";
+                }else{
+                $Resultado .= "<br/> Você obteve " . ($acertos * 10) . "% no teste!<br><br> <strong>REPROVADO!</strong>";   
+                }
             }
             return $Resultado;
         }#Fim MontaResultado
