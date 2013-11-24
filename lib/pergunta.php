@@ -18,6 +18,9 @@
     if(isset($_POST["acao"]) && $_POST["acao"] != ""){
         if($_POST["resposta"]){
             #User selecionou uma resposta. Fazer INSERT
+            $coluna = "r" . $idpergunta;
+            $Sql = "UPDATE c_usuarios SET $coluna = ".$_POST['resposta'];
+            $result = $banco->Execute($Sql);
         }
         if($_POST["proximo"]){
             $banco->RedirecionaPara("pergunta/".($idpergunta + 1));

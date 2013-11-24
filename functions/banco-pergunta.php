@@ -16,6 +16,7 @@
                 $Linha = $Auxilio;
                 $Linha = str_replace("<%IDRESPOSTA%>", $rs["idresposta"], $Linha);
                 $Linha = str_replace("<%RESPOSTA%>", $rs["resposta"], $Linha);
+                $Linha = str_replace("<%CHECKED%>", "", $Linha);
                 $Respostas .= $Linha;
             }
             return $Respostas;
