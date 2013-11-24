@@ -299,7 +299,7 @@
         ';
     }elseif($this->PaginaAux[0] == 'curso-pt5'){
         #Define botoes da primeira pagina
-        $botaoprox = '<button class=\'btn btn-success\' onclick=\'javascript: location.href="<%URLPADRAO%>resposta"\'>Clique aqui para iniciar o teste</button>';
+        $botaoprox = '<button class=\'btn btn-success\' onclick=\'javascript: location.href="<%URLPADRAO%>pergunta/1"\'>Clique aqui para iniciar o teste</button>';
         $botaoant =  '<button class=\'btn btn-success\' onclick=\'javascript: location.href="<%URLPADRAO%>curso/curso-pt4"\'>Clique aqui para ir para a parte 4 de 5</button>';
         $descr = '
             Calendários de recursos<br>
