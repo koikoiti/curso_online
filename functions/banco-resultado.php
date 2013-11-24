@@ -42,10 +42,10 @@
                 
                 foreach($certas as $key=>$value){    
                     if($value == true){
-                        $Resultado .= "$key = OK <br/>";
+                        $Resultado .= "$key - Acertou <br/>";
                         $acertos++;
                     }else{
-                        $Resultado .= "$key = Errou <br/>";
+                        $Resultado .= "$key - Errou <br/>";
                     }
                 }
                 $Resultado .= "<br/> Você obteve " . ($acertos * 10) . "% no teste!";
