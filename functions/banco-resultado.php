@@ -24,7 +24,31 @@
                     $cont++;
                 }
             }else{
+                $acertos = 0;
                 #Calcula resultado
+                for($i = 1; $i < 11; $i++){
+                    $coluna = "r" . $i;
+                    $respUser = $rs[$coluna];
+                    $SqlCerto = "SELECT * FROM c_respostas WHERE idpergunta = $i AND correta = 1";
+                    $resultCerto = parent::Execute($SqlCerto);
+                    $rsCerto = mysql_fetch_array($resultCerto, MYSQL_ASSOC);
+                    $correta = $rsCerto["idresposta"];
+                    if($respUser == $correta){
+                        $certas[$i] = true;
+                    }else{
+                        $certas[$i] = false;
+                    }
+                }
+                
+                foreach($certas as $key=>$value){    
+                    if($value == true){
+                        $Resultado .= "$key = OK <br/>";
+                        $acertos++;
+                    }else{
+                        $Resultado .= "$key = Errou <br/>";
+                    }
+                }
+                $Resultado .= "<br/> Você obteve " . ($acertos * 10) . "% no teste!";
             }
             return $Resultado;
         }#Fim MontaResultado

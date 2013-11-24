@@ -17,6 +17,8 @@
     #Trabalha com POST
     if(isset($_POST["acao"]) && $_POST["acao"] != ""){
         if($_POST["resultado"]){
+            $coluna = "r" . $idpergunta;
+            $Sql = "UPDATE c_usuarios SET $coluna = ".$_POST['resposta'];
             $banco->RedirecionaPara("resultado");
         }
         if($_POST["resposta"]){
