@@ -5,6 +5,7 @@
 	#Instancia o objeto
 	$banco = new bancoinicio();
     
+   $botaoprox = '<button class=\'btn btn-success\' onclick=\'javascript: location.href="<%URLPADRAO%>curso"\'>Parte aqui para ir para a parte 2 de 5</button>';
     $descr = '
         Gerência de Contratos<br><br>
         A gerência de contratos se inicia com as aquisições do projeto. O gerenciamento das aquisições do projeto cuida das compras e aquisições de produtos, serviços ou resultados necessários para a realização do trabalho. A organização pode ser o comprador ou fornecedor do produto, serviço ou resultado. O gerenciamento das aquisições do projeto inclui os processos de gerenciamento de contratos e de controle de mudanças necessários para administrar os contratos ou pedidos de compra. Este gerenciamento inclui, ainda, a administração de qualquer contrato emitido por uma organização externa (o comprador) que está adquirindo o projeto de uma organização executora (o fornecedor) e a administração de obrigações contratuais estabelecidas para a equipe do projeto pelo contratos. Esta área de conhecimento é composta pelos processos:<br><br>
@@ -419,4 +420,6 @@
 	#Imprimi valores
 	$Conteudo = $banco->CarregaHtml('curso');
     $Conteudo = str_replace('<%CURSO%>',$descr,$Conteudo);
+    $Conteudo = str_replace('<%BOTAOPROX%>',$botaoprox,$Conteudo);
+    $Conteudo = str_replace('<%URLPADRAO%>',UrlPadrao,$Conteudo);
 ?>
