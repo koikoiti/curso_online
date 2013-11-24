@@ -16,6 +16,9 @@
     
     #Trabalha com POST
     if(isset($_POST["acao"]) && $_POST["acao"] != ""){
+        if($_POST["resultado"]){
+            $banco->RedirecionaPara("resultado");
+        }
         if($_POST["resposta"]){
             #User selecionou uma resposta. Fazer INSERT
             $coluna = "r" . $idpergunta;
@@ -35,7 +38,7 @@
         $proximo = "<input type='submit' name='proximo' value='Pr&oacute;xima' class='btn btn-primary'>";
         $anterior = "";
     }elseif($idpergunta == "10"){
-        $proximo = "";
+        $proximo = "<input type='submit' name='resultado' value='Calcular Resultado' class='btn btn-primary'>";
         $anterior = "<input type='submit' name='anterior' value='Anterior' class='btn btn-primary'>";
     }else{
         $proximo = "<input type='submit' name='proximo' value='Pr&oacute;xima' class='btn btn-primary'>";
