@@ -50,6 +50,11 @@
 				$_SESSION['usuario'] = $nome;
 				$_SESSION['idsetor'] = $rs['idsetor'];
 				$_SESSION['id'] = $rs['idusuario'];
+                
+                #Salva que logou
+                $acesso = date("Y-m-d H:i:s");
+                $SqlInsertAcesso = 'Insert into c_acesso (idusuario,data) values ("'.$rs['idusuario'].'","'.$acesso.'")';
+                $result = $this->Execute($SqlInsertAcesso);
 			}
 		}
 		
