@@ -6,10 +6,15 @@
             
         	$result = parent::Execute($Sql);
         	$num_rows = parent::Linha($result);
-        	   if($num_rows){
-    			 $rs = mysql_fetch_array($result , MYSQL_ASSOC);
-                 return $rs['data'];
-                }
+  	        if($num_rows){
+	           $rs = mysql_fetch_array($result , MYSQL_ASSOC);
+                return $rs['data'];
+            }
+        }
+        
+        function BuscaQuestoes($id){
+            
+            
         }
   }
 ?>
