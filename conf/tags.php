@@ -1,7 +1,7 @@
 <?php
 	#Definições do Sistema
 	date_default_timezone_set('America/Sao_Paulo');
-	define('UrlPadrao' , "http://localhost:88/curso_online/");
+	define('UrlPadrao' , "http://localhost/curso_online/");
 	
 	#Definições do Banco de Dados
 	define('DB_Host' , "db4free.net");
