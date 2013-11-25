@@ -20,12 +20,13 @@
 			
 					<div id="table-content">
                         <center>
-                            <h2>Curso Online</h2>
+                            <h2>Bem Vindo ao site WBT do grupo KLB Gestão & Projetos</h2>
                             <hr/>
-                            Bem Vindo: <%USUARIO%><br />
+                            <div style="text-align: justify;">Usuário: <%USUARIO%><br />
                             Último Acesso: <%ACESSO%><br />
-                            Status do Curso: <span style="color: <%COR%>"><%Q%></span> <a href="<%URLPADRAO%>resultado">Clique aqui para ver o resultado</a>
-                            <hr/>
+                            Status do Curso: <span style="color: <%COR%>"><%Q%></span><br /><br /> <a href="<%URLPADRAO%>resultado">Clique aqui </a>para ver o resultado.<br />
+                            <a href="<%URLPADRAO%>arquivos/material.pdf">Clique aqui </a>para baixar o mateirla didático.
+                            </div><hr/>
                             <button class="btn btn-primary" onclick="javascript: location.href='<%URLPADRAO%>curso'">Clique aqui para iniciar o curso</button>
                             <br /><br /><br /><br /><br /><br /><button class="btn btn-danger" onclick="if(confirm('Tem certeza que deseja reiniciar o teste e excluir suas respostas?'))location.href='<%URLPADRAO%>reiniciar'">Clique aqui para resetar o curso</button>
                         </center>
