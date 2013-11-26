@@ -20,15 +20,19 @@
 			
 					<div id="table-content">
                         <center>
-                            <h2>Bem Vindo ao site WBT do grupo KLB Gestão & Projetos</h2>
-                            <hr/>
                             <div style="text-align: justify;">Usuário: <%USUARIO%><br />
                             Último Acesso: <%ACESSO%><br />
-                            Status do Curso: <span style="color: <%COR%>"><%Q%></span><br /><br /> <a href="<%URLPADRAO%>resultado">Clique aqui </a>para ver o resultado.<br />
-                            <a href="<%URLPADRAO%>arquivos/material.pdf" target="_blank">Clique aqui </a>para baixar o material didático.<br />
-                            <a href="<%URLPADRAO%>arquivos/ajuda.pdf" target="_blank">Clique aqui </a>para baixar o material do usuário e ajuda.<br />
-                            <a href="http://klbwbt.umforum.net/" target="_blank">Clique Aqui </a>para acessar nosso fórum.
-                            </div><hr/>
+                            Status do Curso: <span style="color: <%COR%>"><%Q%></span><br />
+                            <a href="<%URLPADRAO%>resultado">Clique aqui </a>para ver o resultado.<br /><br />
+                            
+                            
+                            Download de Documentos:<br />
+                            <a href="<%URLPADRAO%>arquivos/material.pdf" target="_blank">Material Didádico</a><br />
+                            <a href="<%URLPADRAO%>arquivos/ajuda.pdf" target="_blank">Material do Usuário e Ajuda</a><br /><hr />
+                            <a href="http://klbwbt.umforum.net/" target="_blank">Fórum de Discussões</a>
+				            </div>
+                            
+                            <hr/>
                             <button class="btn btn-success" onclick="javascript: location.href='<%URLPADRAO%>curso'">Clique aqui para iniciar o curso</button>
                             <br /><br /><br /><br /><br /><br /><button class="btn btn-danger" onclick="if(confirm('Tem certeza que deseja reiniciar o teste e excluir suas respostas?'))location.href='<%URLPADRAO%>reiniciar'">Clique aqui para resetar o curso</button>
                         </center>

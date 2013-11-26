@@ -22,7 +22,7 @@
 		#funcao imprime conteudo
 		function Imprime($Conteudo){
             if($this->Pagina == "login" || $this->VerificaSessao() == false){
-                $menu = "";
+                $menu = $this->CarregaHtml('menu_login');
             }else{
                 $menu = $this->CarregaHtml('menu');
             }
@@ -87,7 +87,7 @@
     				return $Conteudo = $this->CarregaHtml('404');
     			}
             }else{
-                return $Conteudo = $this->ChamaPhp('login');
+                return $Conteudo = $this->ChamaPhp($this->Pagina);
             }
 		} 
 		
