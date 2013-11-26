@@ -87,7 +87,11 @@
     				return $Conteudo = $this->CarregaHtml('404');
     			}
             }else{
-                return $Conteudo = $this->ChamaPhp($this->Pagina);
+                if($this->Pagina == ""){
+                    $this->RedirecionaPara("login");
+                }else{
+                    return $Conteudo = $this->ChamaPhp($this->Pagina);
+                }
             }
 		} 
 		
